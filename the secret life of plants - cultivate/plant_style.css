@@ -1,0 +1,490 @@
+
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cc-mighty-mouth-variable, sans-serif;
+  font-variation-settings: "BOUN" 0, "ital" 0, "wght" 400;
+  font-size: .75rem;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+.link {
+  text-decoration: none; 
+  color: inherit;  
+}
+
+.bonk {
+  border: 2px solid #447C01;
+  background-color: #447C01;
+  text-align: center;
+  width: 100%;       
+  max-width: 35rem; 
+  margin: auto; 
+}
+
+/* home page */
+
+.plant-name {
+  font-weight: bold;
+  font-family: "cc-mighty-mouth-variable",sans-serif;
+  font-variation-settings: 'wght' 800, 'ital' 0, 'BOUN' 0;
+}
+
+.plant-thoughts {
+  font-style: italic;
+  font-family: "cc-mighty-mouth-variable",sans-serif;
+  font-variation-settings: 'wght' 400, 'ital' 3, 'BOUN' 0;
+}
+
+.container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(27, 1fr);
+  max-width: 35rem;
+  margin: auto;
+  gap: 10px;
+}
+
+.welcome {
+  padding: 1rem;
+  text-align: center;
+  margin: auto;
+  max-width: 35rem;
+}
+
+section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* intro */
+
+.intro1 {
+  grid-area: 1 / 1 / 25 / 28;
+  border: 3px solid black; 
+}
+
+.intro-text-1 {
+  background-color: #FFFFFF;
+  grid-area: 2 / 2 / auto / 17;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.intro2 {
+  grid-area: 11 / 15 / 33 / 27;
+  z-index: 5;
+  border: 3px solid black; 
+}
+
+.intro3 {
+  grid-area: 25 / 1 / 40 / 28;
+  border: 3px solid black; 
+}
+
+.intro4 {
+  grid-area: 40 / 1 / 50 / 28;
+  border: 3px solid black; 
+}
+
+.intro-text-2 {
+  background-color: #FFFFFF;
+  grid-area:  48 / 6 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* lantana */
+
+.lantana1 {
+  grid-area: 50 / 1 / 65 / 17;
+  border: 3px solid black;
+  overflow: hidden;
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%; 
+}
+
+.lantana2 {
+  grid-area: 50 / 17 / 65 / 28;
+  border: 3px solid black;
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%; 
+}
+
+.lantana-text {
+  background-color: #E2FFBF;
+  grid-area:  51 / 4 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* peppervine */
+
+.peppervine {
+  grid-area: 65 / 1 / 80 / 28;
+  border: 3px solid black;
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%; 
+}
+
+.peppervine-text {
+  background-color: #E2FFBF;
+  grid-area:  66 / 2 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* river oats */
+
+.river-oats {
+  grid-area: 80 / 1 / 100 / 28;
+  border: 3px solid black; 
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+}
+
+.river-oats-text {
+  background-color: #E2FFBF;
+  grid-area:  auto / 2 / 99 / 20;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* cypress */
+
+.cypress1 {
+  grid-area: 100 / 1 / 130 / 28;
+  border: 3px solid black; 
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+}
+
+.cypress2 {
+  grid-area: 102 / 15 / 128 / 27;
+  border: 3px solid black; 
+}
+
+.cypress-text {
+  background-color: #E2FFBF;
+  grid-area:  128 / 2 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* elbow plant */
+
+.elbow-plant {
+  grid-area: 130 / 1 / 148 / 28;
+  border: 3px solid black; 
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+  overflow: hidden;
+}
+
+.elbow-plant-text {
+  background-color: #E2FFBF;
+  grid-area:  146 / 2 / auto / 22;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* coleus */
+
+.coleus {
+  grid-area: 148 / 1 / 168 / 28;
+  border: 3px solid black; 
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+}
+
+.coleus-text-1 {
+  background-color: #E2FFBF;
+  grid-area:  149 / 2 / auto / 22;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.coleus-text-2 {
+  background-color: #E2FFBF;
+  grid-area:  166 / 6 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* nasturium */
+
+.nasturtium {
+  grid-area: 168 / 1 / 184 / 28;
+  border: 3px solid black; 
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+}
+
+.nasturtium-text {
+  background-color: #E2FFBF;
+  grid-area:  182 / 2 / auto / 25;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* wisteria */
+
+.wisteria1 {
+  grid-area: 184 / 1 / 195 / 12;
+  border: 3px solid black; 
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+}
+
+.wisteria2 {
+  grid-area: 184 / 12 / 195 / 28;
+  border: 3px solid black;
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+}
+
+.wisteria-text {
+  background-color: #E2FFBF;
+  grid-area:  185 / 6 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.author-note {
+  background-color: white;
+  grid-area:  195 / 1 / 197 / 28;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* yucca */
+
+.yucca {
+  grid-area: 197 / 1 / 220 / 28;
+  border: 3px solid black; 
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+}
+
+.yucca-text {
+  background-color: #E2FFBF;
+  grid-area:  218 / 4 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* crape-myrtle */
+
+.crape-myrtle {
+  grid-area: 220 / 1 / 250 / 28;
+  border: 3px solid black; 
+  animation: glow linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50% exit 100%;
+}
+
+.crape-myrtle-text {
+  background-color: #E2FFBF;
+  grid-area:  248 / 2 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.end {
+  grid-area: 250 / 1 / 280 / 28;
+  border: 3px solid black; 
+}
+
+.end-text {
+  background-color: #FFFFFF;
+  grid-area:  276 / 10 / auto / 27;
+  border: 3px solid black;
+  z-index: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Plant Pages */
+
+.plant-images {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(27, 1fr);
+  max-width: 35rem;
+  margin: auto;
+  gap: 10px;
+}
+
+.plant-image-1 {
+  grid-area: 1 / 1 / 25 / 28;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid black; 
+}
+
+.plant-image-2 {
+  grid-area: 11 / 12 / 28 / 27;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  border: 3px solid black; 
+}
+
+.plant-info {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left;
+  margin: auto;
+  max-width: 35rem;
+}
+
+.plant-page-name {
+  font-weight: bold;
+  font-family: "cc-mighty-mouth-variable",sans-serif;
+  font-variation-settings: 'wght' 800, 'ital' 0, 'BOUN' 0;
+  font-size: 1.5rem;
+}
+
+.plant-scientific {
+  font-weight: bold;
+  font-family: "cc-mighty-mouth-variable",sans-serif;
+  font-variation-settings: 'wght' 800, 'ital' 3, 'BOUN' 0;
+  font-size: 1rem;
+}
+
+.plant-facts {
+  padding: 1rem;
+  margin: auto;
+  max-width: 35rem;
+  background-color: #E2FFBF;
+}
+
+.plant-factoid {
+  display: flex;
+  align-items: center;
+}
+
+.plant-factoid img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.bottom-stuff {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(27, 1fr);
+  max-width: 35rem;
+  margin: auto;
+  gap: 10px;
+}
+
+.back-button {
+  display: flex;
+  grid-area: 1 / 2 / auto / 20;
+}
+
+.back-button img {
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.seen-button {
+  grid-area: 1 / 18 / 3 / 27;
+  justify-content: center;
+}
+
+.seen:not(:open) {
+    & summary {
+        &::marker {
+          content: "I said hi to this plant!";
+          color: #447C01;
+            
+        }
+    }
+}
+
+.seen:open {
+    & summary {
+        &::marker {
+          content: "Click for proof of visitation";
+          color: #D9D9D9;
+        }
+    }
+}
+
+
+@keyframes glow {
+  20% {
+    box-shadow: 0 0 0 rgba(68, 124, 1, 0);
+  }
+  50% {
+    box-shadow: 0 0 10px 10px rgba(68, 124, 1, 0.7),
+                0 0 20px 20px rgba(68, 124, 1, 0.4),
+                0 0 40px 40px rgba(68, 124, 1, 0.2);
+  }
+  80% {
+    box-shadow: 0 0 0 rgba(68, 124, 1, 0);
+  }
+}
