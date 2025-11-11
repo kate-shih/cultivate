@@ -1,7 +1,7 @@
-let angle;
+let angle = 25;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
   angleMode(DEGREES);
 }
@@ -9,26 +9,18 @@ function setup() {
 function draw() {
   background(0);
 
-  // Calculate the angle based on the mouse position, maximum 90 degrees
-  angle = (mouseX / width) * 90;
-  angle = min(angle, 90);
-
   // Start the tree from the bottom of the screen
   translate(width / 2, height);
 
   // Draw a line 120 pixels
   stroke(0, 255, 255);
-  line(0, 0, 0, -120);
+  line(0, 0, 0, -100);
 
   // Move to the end of that line
-  translate(0, -120);
+  translate(0, -100);
 
   // Start the recursive branching
-  branch(120, 0);
-
-  describe(
-    'A tree drawn by recursively drawing branches, with angle determined by the user mouse position.'
-  );
+  branch(100, 0);
 }
 
 function branch(h, level) {
