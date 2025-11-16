@@ -7,21 +7,23 @@
     <title>get to know some plants 🌿</title>
     <link rel="stylesheet" href="https://use.typekit.net/vgf6vas.css">
     <link rel="stylesheet" href="./plant_style.css" />
+    <script src="left_script.js"></script>
   </head>
   <body>
-      <header>
+      <!-- <header>
         <h1>the secret life of plants</h1>
-      </header>
+      </header> -->
 
       <section class="welcome">
-        <p>Welcome to the Secret Life of Plants! Take a stroll along the creek and peek into the thoughts of the plants around you. 
+        <p>Welcome to the Secret Life of Plants! Take a stroll along the creek and peek into the thoughts of the plants around you.  
         </p>
+        <br>
+        <p>Click on each plant panel to learn more!</p>
       </section>
-      <div class="bonk">
+      <!-- <div class="bonk">
           <h3>Click on each plant panel to learn more!</h3>
-      </div>
+      </div> -->
 
-      <br>
 
 
       <div class="container">
@@ -54,9 +56,11 @@
         
         <section class="lantana1" id="lantana">
           <a href="lantana.html" class="link">
-            <img src="halftone photos/lantana1.png" alt="A picture of Lantana">
+            <img src="halftone photos/lantana1.png" alt="A picture of Lantana"
+            onclick="window.parent.postMessage({type:'plantClicked', plant:'lantana'}, '*')">
           </a>
         </section>
+
 
         <section class="lantana2">
           <a href="lantana.html" class="link">
@@ -109,14 +113,14 @@
 
         <!-- cypress -->
 
-        <section class="cypress1">
-          <a href="cypress.html" class="link">
+        <section class="cypress1" id="bald-cypress">
+          <a href="bald-cypress.html" class="link">
             <img src="halftone photos/cypress 1.png" alt="A picture of Bald Cypress">
           </a>
         </section>
 
         <section class="cypress2">
-          <a href="cypress.html" class="link">
+          <a href="bald-cypress.html" class="link">
             <img src="halftone photos/cypress leaves.png" alt="A picture of Bald Cypress leaves">
           </a>
         </section>
@@ -130,7 +134,7 @@
 
         <!-- elbow plant -->
 
-        <section class="elbow-plant">
+        <section class="elbow-plant" id="elbow-plant">
           <a href="elbow-plant.html" class="link">
             <img src="halftone photos/elbow plant.png" alt="A picture of an elbow plant">
           </a>
@@ -145,7 +149,7 @@
 
         <!-- coleus -->
 
-        <section class="coleus">
+        <section class="coleus" id="coleus">
           <a href="coleus.html" class="link">
             <img src="halftone photos/coleus.png" alt="A picture of Coleus">
           </a>
@@ -166,7 +170,7 @@
 
         <!-- nasturtium -->
 
-        <section class="nasturtium">
+        <section class="nasturtium" id="nasturtium">
           <a href="nasturtium.html" class="link">
             <img src="halftone photos/nasturtium.png" alt="A picture of Garden Nasturtium">
           </a>
@@ -181,7 +185,7 @@
 
         <!-- wisteria -->
 
-        <section class="wisteria1">
+        <section class="wisteria1" id="wisteria">
           <a href="wisteria.html" class="link">
             <img src="halftone photos/wisteria closeup.png" alt="A zoom in on a wisteria flower">
           </a>
@@ -209,8 +213,8 @@
 
         <!-- yucca -->
 
-        <section class="yucca">
-          <a href="yucca.html" class="link">
+        <section class="yucca" id="red-yucca">
+          <a href="red-yucca.html" class="link">
             <img src="halftone photos/yucca.png" alt="A picture of Red Yucca">
           </a>
         </section>
@@ -224,7 +228,7 @@
 
         <!-- crape myrtle -->
 
-        <section class="crape-myrtle">
+        <section class="crape-myrtle" id="crape-myrtle">
           <a href="crape-myrtle.html" class="link">
             <img src="halftone photos/crape-myrtle.png" alt="A picture of Crape-Myrtle">
           </a>

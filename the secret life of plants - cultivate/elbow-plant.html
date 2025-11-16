@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+    <title>elbow plant</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zcx5ued.css">
+    <link rel="stylesheet" href="./plant_style.css" />
+    <script src="left_script.js"></script>
+  </head>
+
+  <body>
+      <!-- <header>
+        <h1>the secret life of plants</h1>
+      </header> -->
+      
+      <br>
+
+      <div class="plant-images">
+        <section class="plant-image-1">
+          <img src="plant page photos/elbow plant.JPG" alt="A picture of Elbow Plant">
+        </section>
+        <section class="plant-image-2">
+          <img src="plant page photos/elbow plant close.png" alt="A picture of Elbow Plant flowers">
+        </section>
+       </div>
+      
+      <div class="plant-info">
+        <section class="plant-page-name">
+          <h2>Elbow Plant</h2>
+        </section>
+        <section class="plant-scientific">
+          <p>Forestiera angustifolia</p>
+        </section>
+      </div>
+
+      <br>
+
+      <div class="plant-facts">
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Not too tall, not too flashy. I’m the steady one filling in the gaps. The forest would look patchy without me.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Cypress can’t remember if it’s spring or fall. That’s fine. While he’s confused, I’ll keep the green going.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Dry spells, sudden rains. Doesn't matter, I roll with it. You learn resilience when the seasons can’t make up their mind.</p>
+        </section>
+      </div> 
+      
+      <br>
+      <br>
+
+      <div class="bottom-stuff">
+        <section class="back-button">
+          <p> 
+            <a href="plant_index.html#elbow-plant" class="link">
+            ← back to comic
+            </a>
+          </p>
+        </section>
+        
+        <div class="seen-button">
+          <details class="seen" open>
+            <summary>
+            </summary>
+          </details>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+  </body>
+
+<script>
+  function sendGrowTree() {
+    const message = { type: "growTree", page: "elbow-plant.html" };
+        const rightIframe = window.parent.document.querySelector('.right-panel iframe');
+        if (rightIframe && rightIframe.contentWindow) {
+          rightIframe.contentWindow.postMessage(message, '*');
+          console.log('Sent growTree directly to right iframe');
+          return;
+        }
+    }
+  setInterval(sendGrowTree, 3000);
+</script>
+
+</html>

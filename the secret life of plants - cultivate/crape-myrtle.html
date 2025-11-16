@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+    <title>crape myrtle</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zcx5ued.css">
+    <link rel="stylesheet" href="./plant_style.css" />
+  </head>
+
+  <body>
+      <!-- <header>
+        <h1>the secret life of plants</h1>
+      </header> -->
+      
+      <br>
+
+      <div class="plant-images">
+        <section class="plant-image-1">
+          <img src="plant page photos/crape myrtle.JPG" alt="A picture of Crape Myrtle">
+        </section>
+        <section class="plant-image-2">
+          <img src="plant page photos/crape myrtle close.JPG" alt="A close-up of crape myrtle leaves">
+        </section>
+       </div>
+      
+      <div class="plant-info">
+        <section class="plant-page-name">
+          <h2>Crape Myrtle</h2>
+        </section>
+        <section class="plant-scientific">
+          <p>Lagerstroemia indica</p>
+        </section>
+      </div>
+
+      <br>
+
+      <div class="plant-facts">
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>I love to bloom in my sunny spot. I like stretching my branches wide so everyone can see my flowers before summer ends.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Wisteria and Red Yucca do their own thing nearby, but I’m the last one standing. My blooms linger, giving pollinators one final treat before the season changes.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Bright sun and a little dry weather? No problem. My flowers keep going into late summer, making sure I’m the grand finale before fall arrives.</p>
+        </section>
+      </div> 
+      
+      <br>
+      <br>
+
+      <div class="bottom-stuff">
+        <section class="back-button">
+          <p> 
+            <a href="plant_index.html#crape-myrtle" class="link">
+            ← back to comic
+            </a>
+          </p>
+        </section>
+        
+        <div class="seen-button">
+          <details class="seen" open>
+            <summary>
+            </summary>
+          </details>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+  </body>
+
+  <script>
+  function sendGrowTree() {
+    const message = { type: "growTree", page: "crape-myrtle.html" };
+        const rightIframe = window.parent.document.querySelector('.right-panel iframe');
+        if (rightIframe && rightIframe.contentWindow) {
+          rightIframe.contentWindow.postMessage(message, '*');
+          console.log('Sent growTree directly to right iframe');
+          return;
+        }
+    }
+  setInterval(sendGrowTree, 3000);
+</script>
+
+</html>
+

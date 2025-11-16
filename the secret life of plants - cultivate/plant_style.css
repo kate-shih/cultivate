@@ -64,8 +64,8 @@ h3 {
 }
 
 .welcome {
-  padding: 1rem;
-  text-align: center;
+  padding: 1rem 0;
+  text-align: left;
   margin: auto;
   max-width: 35rem;
 }

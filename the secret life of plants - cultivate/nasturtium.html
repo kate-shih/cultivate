@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+    <title>garden nasturtium</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zcx5ued.css">
+    <link rel="stylesheet" href="./plant_style.css" />
+  </head>
+
+  <body>
+      <!-- <header>
+        <h1>the secret life of plants</h1>
+      </header> -->
+      
+      <br>
+
+      <div class="plant-images">
+        <section class="plant-image-1">
+          <img src="plant page photos/garden nasturtium.JPG" alt="A picture of Garden Nasturtium">
+        </section>
+        <section class="plant-image-2">
+          <img src="plant page photos/garden nasturtium close.png" alt="A close-up of garden nasturtium leaves">
+        </section>
+       </div>
+      
+      <div class="plant-info">
+        <section class="plant-page-name">
+          <h2>Garden Nasturtium</h2>
+        </section>
+        <section class="plant-scientific">
+          <p>Tropaeolum majus</p>
+        </section>
+      </div>
+
+      <br>
+
+      <div class="plant-facts">
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Containers, garden beds, little corners… I don’t need much. Give me a planter of my own, and I’m perfectly happy.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Coleus hogs the spotlight, but gardeners know me as the good neighbor — I keep pests busy so everyone else can breathe.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Summer heat is exhausting. I’d rather wait for cooler days before I show off my flowers again.</p>
+        </section>
+      </div> 
+      
+      <br>
+      <br>
+
+      <div class="bottom-stuff">
+        <section class="back-button">
+          <p> 
+            <a href="plant_index.html#nasturtium" class="link">
+            ← back to comic
+            </a>
+          </p>
+        </section>
+        
+        <div class="seen-button">
+          <details class="seen" open>
+            <summary>
+            </summary>
+          </details>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+  </body>
+
+  <script>
+  function sendGrowTree() {
+    const message = { type: "growTree", page: "nasturtium.html" };
+        const rightIframe = window.parent.document.querySelector('.right-panel iframe');
+        if (rightIframe && rightIframe.contentWindow) {
+          rightIframe.contentWindow.postMessage(message, '*');
+          console.log('Sent growTree directly to right iframe');
+          return;
+        }
+    }
+  setInterval(sendGrowTree, 3000);
+</script>
+
+</html>
+

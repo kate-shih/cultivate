@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+    <title>wistera</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zcx5ued.css">
+    <link rel="stylesheet" href="./plant_style.css" />
+  </head>
+
+  <body>
+      <!-- <header>
+        <h1>the secret life of plants</h1>
+      </header> -->
+      
+      <br>
+
+      <div class="plant-images">
+        <section class="plant-image-1">
+          <img src="plant page photos/wisteria.png" alt="A picture of Wisteria">
+        </section>
+        <section class="plant-image-2">
+          <img src="plant page photos/wisteria close.png" alt="A close-up of a wisteria flower">
+        </section>
+       </div>
+      
+      <div class="plant-info">
+        <section class="plant-page-name">
+          <h2>Wisteria</h2>
+        </section>
+        <section class="plant-scientific">
+          <p>Wisteria sinensis</p>
+        </section>
+      </div>
+
+      <br>
+
+      <div class="plant-facts">
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Why stay grounded when I can climb? Give me something to hold onto, and I’ll twirl my way up into the spotlight.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Red Yucca keeps to itself down there, and that’s fine by me. I do my own thing up here, making sure pollinators don’t miss my flowers.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Late May to June? That’s my main act. But if the summer or fall warms up, I might just surprise you with a few more blooms. Frost? Nope…not my style.</p>
+        </section>
+      </div> 
+      
+      <br>
+      <br>
+
+      <div class="bottom-stuff">
+        <section class="back-button">
+          <p> 
+            <a href="plant_index.html#wisteria" class="link">
+            ← back to comic
+            </a>
+          </p>
+        </section>
+        
+        <div class="seen-button">
+          <details class="seen" open>
+            <summary>
+            </summary>
+          </details>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+  </body>
+
+  <script>
+  function sendGrowTree() {
+    const message = { type: "growTree", page: "wisteria.html" };
+        const rightIframe = window.parent.document.querySelector('.right-panel iframe');
+        if (rightIframe && rightIframe.contentWindow) {
+          rightIframe.contentWindow.postMessage(message, '*');
+          console.log('Sent growTree directly to right iframe');
+          return;
+        }
+    }
+  setInterval(sendGrowTree, 3000);
+</script>
+
+</html>
+

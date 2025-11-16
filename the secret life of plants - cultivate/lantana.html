@@ -4,15 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.ico" />
-    <title>latana</title>
+    <title>lantana</title>
     <link rel="stylesheet" href="https://use.typekit.net/zcx5ued.css">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./plant_style.css" />
+    <script src="left_script.js"></script>
   </head>
 
   <body>
-      <header>
+      <!-- <header>
         <h1>the secret life of plants</h1>
-      </header>
+      </header> -->
       
       <br>
 
@@ -59,7 +60,7 @@
       <div class="bottom-stuff">
         <section class="back-button">
           <p> 
-            <a href="index.html#lantana" class="link">
+            <a href="plant_index.html#lantana" class="link">
             ← back to comic
             </a>
           </p>
@@ -77,4 +78,18 @@
       <br>
       <br>
   </body>
+
+<script>
+  function sendGrowTree() {
+    const message = { type: "growTree", page: "lantana.html" };
+        const rightIframe = window.parent.document.querySelector('.right-panel iframe');
+        if (rightIframe && rightIframe.contentWindow) {
+          rightIframe.contentWindow.postMessage(message, '*');
+          console.log('Sent growTree directly to right iframe');
+          return;
+        }
+    }
+  setInterval(sendGrowTree, 3000);
+</script>
+
 </html>

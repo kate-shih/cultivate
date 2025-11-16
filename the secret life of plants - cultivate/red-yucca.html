@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+    <title>red yucca</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zcx5ued.css">
+    <link rel="stylesheet" href="./plant_style.css" />
+  </head>
+
+  <body>
+      <!-- <header>
+        <h1>the secret life of plants</h1>
+      </header> -->
+      
+      <br>
+
+      <div class="plant-images">
+        <section class="plant-image-1">
+          <img src="plant page photos/red yucca.JPG" alt="A picture of red yucca">
+        </section>
+        <section class="plant-image-2">
+          <img src="plant page photos/red yucca close.png" alt="A close-up of red yucca">
+        </section>
+       </div>
+      
+      <div class="plant-info">
+        <section class="plant-page-name">
+          <h2>Red Yucca</h2>
+        </section>
+        <section class="plant-scientific">
+          <p>Hesperaloe parviflora</p>
+        </section>
+      </div>
+
+      <br>
+
+      <div class="plant-facts">
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>I like having room to spread out—my leaves and flower spikes fill the space and catch the sun without bumping into anyone.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Wisteria swings its fancy flowers nearby, but I’ve got my own patch. Plenty of room for both of us to do our thing.</p>
+        </section>
+        <br>
+        <section class="plant-factoid">
+          <img src="icons/psychiatry.png">
+          <p>Hot days, dry spells, or the occasional cold snap—I keep going. I bloom here and there through most of the year, steady and low-maintenance.</p>
+        </section>
+      </div> 
+      
+      <br>
+      <br>
+
+      <div class="bottom-stuff">
+        <section class="back-button">
+          <p> 
+            <a href="plant_index.html#red-yucca" class="link">
+            ← back to comic
+            </a>
+          </p>
+        </section>
+        
+        <div class="seen-button">
+          <details class="seen" open>
+            <summary>
+            </summary>
+          </details>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+  </body>
+
+  <script>
+  function sendGrowTree() {
+    const message = { type: "growTree", page: "red-yucca.html" };
+        const rightIframe = window.parent.document.querySelector('.right-panel iframe');
+        if (rightIframe && rightIframe.contentWindow) {
+          rightIframe.contentWindow.postMessage(message, '*');
+          console.log('Sent growTree directly to right iframe');
+          return;
+        }
+    }
+  setInterval(sendGrowTree, 3000);
+</script>
+
+</html>
