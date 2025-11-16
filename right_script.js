@@ -62,7 +62,7 @@ function insertImage(imgPath) {
     img.style.height = imgSize + 'px';
     // place at random
     const x = Math.floor(Math.random() * Math.max(1, window.innerWidth - imgSize));
-    const y = Math.floor(Math.random() * Math.max(1, window.innerHeight - imgSize));
+    const y = Math.floor(Math.random() * Math.max(1, window.innerHeight - imgSize - 80) + 80);
     img.style.left = x + 'px';
     img.style.top = y + 'px';
     document.body.appendChild(img);
