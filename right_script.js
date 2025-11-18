@@ -8,17 +8,18 @@ async function setup() {
   console.log("Canvas created:", windowWidth, windowHeight);
   noLoop();
 
-  // Load CSV data
+  // load CSV
   csvData = await d3.csv("plant_data.csv", d3.autoType);
   console.log("CSV loaded:", csvData);
 
-  // Get current page filename
+  // get page filename
   const currentPage = window.location.pathname.split('/').pop();
   console.log("Current page:", currentPage);
 
-  // Find the matching row in the CSV
+  // find the matching row in the CSV
   const pageData = csvData.find(row => row.page === currentPage);
   
+  // find the image path
   if (pageData) {
     console.log("Found page data:", pageData);
     let imgPath = pageData.image;
@@ -31,6 +32,7 @@ async function setup() {
 function draw() {
   background(228, 250, 220);
   
+  // draw all images
   if (images.length > 0) {
     for (let i = 0; i < images.length; i++) {
       const image = images[i];
@@ -40,27 +42,32 @@ function draw() {
   }
 }
 
+// listen for messages from the left iframe
 window.addEventListener("message", (event) => {
   console.log("Message received:", event.data);
   if (event.data.type === "growTree") {
     console.log("Right iframe received growTree message!");
-    // find which page this message refers to
+    
+	// find which page this message refers to
     const row = csvData.find(r => r.page === event.data.page);
 
+	// get the image path
     let imgPath = row.image;
 
     insertImage(imgPath);
   }
 });
 
-// Insert an image file (fetched as text) into the page at a random position
+// insert an image file into the page at a random position
 function insertImage(imgPath) {
-    const img = document.createElement('img');
+    // create img element
+	const img = document.createElement('img');
     img.src = imgPath;
     img.style.position = 'absolute';
     img.style.width = imgSize + 'px';
     img.style.height = imgSize + 'px';
-    // place at random
+    
+	// place at random
     const x = Math.floor(Math.random() * Math.max(1, window.innerWidth - imgSize));
     const y = Math.floor(Math.random() * Math.max(1, window.innerHeight - imgSize - 80) + 80);
     img.style.left = x + 'px';
@@ -69,17 +76,6 @@ function insertImage(imgPath) {
     console.log('Inserted IMG', imgPath, 'at', x, y);
     return;
   }
-
-// function windowResized() {
-//   resizeCanvas(windowWidth, windowHeight);
-//   // keep the SVGs on screen after a resize
-//   for (let i = 0; i < svgs.length; i++) {
-//     svgs[i].x = constrain(svgs[i].x, imgSize / 2, windowWidth - imgSize / 2);
-//     svgs[i].y = constrain(svgs[i].y, imgSize / 2, windowHeight - imgSize / 2);
-//   }
-//   redraw();
-// }
-
 
 
 
